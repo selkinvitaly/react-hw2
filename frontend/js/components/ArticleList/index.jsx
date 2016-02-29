@@ -26,17 +26,6 @@ class ArticleList extends Component {
     this.setState(newState);
   }
 
-  toggleArticle(id) {
-    const self = this;
-
-    return function() {
-      let newState = self.state;
-
-      newState.showed[id] = !newState.showed[id];
-      self.setState(newState);
-    };
-  }
-
   getArticles() {
     return this.props.articles.map(item =>
       <Article
